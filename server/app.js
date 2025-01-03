@@ -24,11 +24,12 @@ connectDB();
 const app = express();
 
 
-app.use(cookieParser())
 app.use(cors({
     origin:"https://todo-handler-app.netlify.app",
     credentials:true,
 }))
+
+app.use(cookieParser())
 app.use("/api/v1/user", UserRouter);
 app.use("/api/v1/todo", TodoRouter);
 app.use(express.json())
