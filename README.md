@@ -7,7 +7,6 @@ This repository contains the backend implementation for the **Todo Application**
 
 - **User Authentication**: Secure user registration, login, and logout functionality using JWT and cookies.
 - **Task Management**: Create, update, delete, and retrieve todos.
-- **Middleware Protection**: API routes protected with JWT-based authentication.
 - **Database Integration**: MongoDB for efficient storage and retrieval of user data and todos.
 - **CORS Support**: Allows communication between the backend and the frontend hosted on different domains.
 - **Cookie Management**: Uses cookies to store JWT tokens for secure session management.
