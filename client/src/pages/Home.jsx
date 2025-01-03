@@ -18,7 +18,7 @@ export const Home = () => {
   const addTodoHandler = async () => {
     try {
       const res = await axios.post(
-        'http://localhost:8000/api/v1/todo',
+        'https://todo-application-1orh.onrender.com/api/v1/todo',
         { title, description, priority },
         {
           headers: {
@@ -42,7 +42,7 @@ export const Home = () => {
 
   const fetchTodos = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/v1/todo', {
+      const res = await axios.get('https://todo-application-1orh.onrender.com/api/v1/todo', {
         withCredentials: true,
       });
       if (res.data.success) {
@@ -79,7 +79,7 @@ export const Home = () => {
   const deleteTodoHandler = async (todoID) => {
     try {
       const res = await axios.delete(
-        `http://localhost:8000/api/v1/todo/${todoID}`,
+        `https://todo-application-1orh.onrender.com/api/v1/todo/${todoID}`,
         { withCredentials: true }
       );
       if (res.data.success) {
@@ -94,7 +94,7 @@ export const Home = () => {
   const updateTodoHandler = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:8000/api/v1/todo/${editTodo._id}`,
+        `https://todo-application-1orh.onrender.com/api/v1/todo/${editTodo._id}`,
         { title: editTodo.title, description: editTodo.description, priority: editTodo.priority },
         {
           headers: {

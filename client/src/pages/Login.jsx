@@ -23,7 +23,7 @@ export const Login = () => {
 
     const loginHandler = async () => {
         try {
-            const res = await axios.post("http://localhost:8000/api/v1/user/login", user, {
+            const res = await axios.post("https://todo-application-1orh.onrender.com/api/v1/user/login", user, {
                 headers: {
                     "Content-Type": "application/json"
                 },

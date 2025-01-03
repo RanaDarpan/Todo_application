@@ -16,7 +16,7 @@ export const Register = () => {
 
     const registerHandler = async () => {
         try {
-            const res = await axios.post("http://localhost:8000/api/v1/user/register", { fullname, email, password }, {
+            const res = await axios.post("https://todo-application-1orh.onrender.com/api/v1/user/register", { fullname, email, password }, {
                 headers: {
                     "Content-Type": "application/json"
                 },

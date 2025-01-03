@@ -9,7 +9,7 @@ export const Navbar = () => {
   const logoutHandler = async () => {
 
     try {
-        const res = await axios.get("http://localhost:8000/api/v1/user/logout", {
+        const res = await axios.get("https://todo-application-1orh.onrender.com/api/v1/user/logout", {
         withCredentials: true,
       });
 
