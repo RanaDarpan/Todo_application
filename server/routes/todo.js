@@ -10,6 +10,6 @@ router.use(express.json());
 
 router.route("/").post(CreateTodo).get(getAllTodos);
 // router.route("/").get(getAllTodos)
-router.route("/:todoID").put(isAuthenticate,updateTodo).delete(isAuthenticate,deleteTodo);;
+router.route("/:todoID").put(updateTodo).delete(deleteTodo);;
 // router.route("/:todoID").delete(deleteTodo);
 export default router;
