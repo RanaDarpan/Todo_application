@@ -26,7 +26,7 @@ const app = express();
 
 app.use(cookieParser())
 app.use(cors({
-    origin:"https://ornate-moonbeam-b48503.netlify.app",
+    origin:"https://todo-handler-app.netlify.app",
     credentials:true,
 }))
 app.use("/api/v1/user", UserRouter);
