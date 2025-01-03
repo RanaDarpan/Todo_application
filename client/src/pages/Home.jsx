@@ -24,7 +24,7 @@ export const Home = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          withCredentials: true,
+          credentials: "include",
         }
       );
       if (res.data.success) {
@@ -80,7 +80,7 @@ export const Home = () => {
     try {
       const res = await axios.delete(
         `https://todo-application-1orh.onrender.com/api/v1/todo/${todoID}`,
-        { withCredentials: true }
+        { credentials: "include" }
       );
       if (res.data.success) {
         toast.success(res.data.message, { autoClose: 2000 });
@@ -100,7 +100,7 @@ export const Home = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          withCredentials: true,
+          credentials: "include",
         }
       );
       if (res.data.success) {

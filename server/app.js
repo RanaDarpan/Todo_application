@@ -36,6 +36,9 @@ app.use(bodyParaser.urlencoded({ extended: true }))
 app.use("/api/v1/user", UserRouter);
 app.use("/api/v1/todo", TodoRouter);
 
+app.use("/api/v1/user", UserRouter);
+app.use("/api/v1/todo", TodoRouter);
+
 
 const PORT = process.env.PORT || 3000;
 
