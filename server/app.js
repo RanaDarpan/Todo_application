@@ -24,15 +24,17 @@ connectDB();
 const app = express();
 
 
-app.use(cookieParser())
+
 app.use(cors({
-    origin:"https://todo-application-1orh.onrender.com",
+    origin:"https://todo-handler-app.netlify.app",
     credentials:true,
 }))
-app.use("/api/v1/user", UserRouter);
-app.use("/api/v1/todo", TodoRouter);
+app.use(cookieParser())
 app.use(express.json())
 app.use(bodyParaser.urlencoded({ extended: true }))
+
+app.use("/api/v1/user", UserRouter);
+app.use("/api/v1/todo", TodoRouter);
 
 
 const PORT = process.env.PORT || 3000;

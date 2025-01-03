@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken"
 dotenv.config();
 const isAuthenticate = async (req, res, next) => {
     try {
+        console.log(req.cookies)
         if (!req.cookies || !req.cookies.token) {
             return res.status(401).json({
                 success: false,
